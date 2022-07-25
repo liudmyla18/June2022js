@@ -50,20 +50,26 @@ let numb9 =  false;
 console.log(numb9);
 alert(numb9);
 document.write(numb9+``);
-let firstName = (` Mykytchuk`);
-let middleName = ( ` Liudmyla`);
-let lastName = ( ` Ivanivna`);
-let person = ( firstName+ middleName+lastName);
-console.log( person);
-document.write( person);
+
+let firstName = `Mykytchuk`;
+let middleName = `Liudmyla`;
+let lastName = `Ivanivna`;
+// let person = ( firstName+ middleName+lastName);
+let person = `${firstName} ${middleName} ${lastName}`;
+console.log(person);
+
+// document.write( person);
+
 let aa = 100;
 let bb = '100';
 let cc = true;
 console.log(typeof aa,bb,cc );
 
- prompt(` What is your name?`)
- prompt(` What is your last name?`)
- prompt(` Your year of birth?`)
-console.log(prompt)
+let name = prompt('Enter name');
+let middle = prompt('Enter middleName');
+let age = +prompt('Enter age');
+console.log(name);
+console.log(middle);
+console.log(age);
 
 
