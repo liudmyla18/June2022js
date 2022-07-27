@@ -52,30 +52,30 @@ let bookcopi3={
   title:`Jane Eyre`,
   pageCount: 190,
   genre: `novel`,
-  authors:[`Chorlotte Bronte`,47]
+  authors:[{name:[`Chorlotte Bronte`], age:[47],}]
 }
-console.log(bookcopi3.authors)
+console.log(bookcopi3.authors[0].age)
 
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
  let array = [
    { name:`Dima`, username:`ddddd`,password: [`d1d11d1`]},
    {name:`Disha`, username:`hhhh`,password: [`h1h1h1h1`]},
-   { name:`Liza`, username:`lllll`,password: [`lll111ll`]},
+   { name:`Liza`, username:`lllll`,password:[`lll111ll`]},
    {name:`lena`, username:`nnnnn`,password:[`n2n2n2n`]},
-   {name:`Anna`, username:`aaaaa`,password: [`3a3aa3a`]},
-   {name:`Kolya`, username:`kkkk`,password: [`k5k5k5k`]},
-   {name:`Danya`, username:`yyyy`,password: [`y6yyy6y`]},
-   {name:`Ira`, username:`iiiiiii`,password: [`i8i8i8`]},
-   {name:`Jna`, username:`jjjjj`,password: [`j4jj5j4`]},
-   {name:`Rita`, username:`rrrrr`,password: [`r8r8r6rr`]},
+   {name:`Anna`, username:`aaaaa`,password:[`3a3aa3a`]},
+   {name:`Kolya`, username:`kkkk`,password:[`k5k5k5k`]},
+   {name:`Danya`, username:`yyyy`,password:[`y6yyy6y`]},
+   {name:`Ira`, username:`iiiiiii`,password:[`i8i8i8`]},
+   {name:`Jna`, username:`jjjjj`,password:[`j4jj5j4`]},
+   {name:`Rita`, username:`rrrrr`,password:[`r8r8r6rr`]},
 ]
-console.log(array[0])
-console.log(array[1])
-console.log(array[2])
-console.log(array[3])
-console.log(array[4])
-console.log(array[5])
-console.log(array[6])
-console.log(array[7])
-console.log(array[8])
-console.log(array[9])
+console.log(array[0].password)
+console.log(array[1].password)
+console.log(array[2].password)
+console.log(array[3].password)
+console.log(array[4].password)
+console.log(array[5].password)
+console.log(array[6].password)
+console.log(array[7].password)
+console.log(array[8].password)
+console.log(array[9].password)
