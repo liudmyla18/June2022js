@@ -56,32 +56,32 @@ if (day >= 21 && day <= 30) {
 
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
 
-// let week = prompt('Enter the serial number of the day of the week');
-
-switch (1) {
-  case 1:
-  case (`monday`):
-    console.log(`monday`);
-    break;
-  case `2`:
-    console.log(`tuesday`);
-    break;
-  case `3`:
-    console.log(`wednesday`);
-    break;
-  case `4`:
-    console.log(`thursday`);
-    break;
-  case `5`:
-    console.log(`friday`);
-    break;
-  case `6`:
-    console.log(`saturday`);
-    break;
-  case `7`:
-    console.log(`sunday`);
-
-}
+// let week = + prompt('Enter the serial number of the day of the week');
+//
+// switch (week) {
+//   case 1:
+//   case (`monday`):
+//     console.log(`monday`);
+//     break;
+//   case 2:
+//     console.log(`tuesday`);
+//     break;
+//   case 3:
+//     console.log(`wednesday`);
+//     break;
+//   case 4:
+//     console.log(`thursday`);
+//     break;
+//   case 5:
+//     console.log(`friday`);
+//     break;
+//   case 6:
+//     console.log(`saturday`);
+//     break;
+//   case 7:
+//     console.log(`sunday`);
+//
+// }
 
 
 
@@ -89,22 +89,26 @@ switch (1) {
 //     Потрібно знайти та вивести максимальне число з тих двох .
 //     Також потрібно врахувати коли введені рівні числа.
 
-let namber1 = 4;
-let namber2 = 8;
-
-if (namber1 < namber2){
-  console.log(namber2)
-}else if (namber1 > namber2){
-  console.log(namber1)
-}else if (namber1 === namber2)
-  console.log(namber2)
+// let namber1 = 4;
+// let namber2 = 8;
+//
+// if (namber1 < namber2){
+//   console.log(namber2)
+// }else if (namber1 > namber2){
+//   console.log(namber1)
+// }else if (namber1 === namber2)
+//   console.log(namber2)
 
 //   - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //     за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподыбне, тобто кастується до false)
+//
+// let xx = prompt(`?`);
+// let isRoadClear = prompt('?');
+// if ( xx === `default`|| isRoadClear === `falsy` ) {
+//
+// }
+// console.log(`default`);
 
-let xx = prompt(`?`);
-let isRoadClear = prompt('?');
-if ( xx === `default`|| isRoadClear === `falsy` ) {
 
-}
-console.log(`default`);
+let xxx = 0 || `default`;
+console.log(xxx);
