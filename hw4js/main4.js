@@ -26,7 +26,13 @@
 // Масив:
 //
   let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-// 1 варіант
+document.write(`<ul>`)
+for(const listOfItem of listOfItems){
+
+  document.write(`<li>${listOfItems}</li>`)
+}
+document.write(`</ul>`)
+
 
 // for (let i = listOfItems.length -8; i >=0; i-- ){
 // document.write (`<ul>
@@ -47,21 +53,9 @@
 // <li> html,css,javascript,mysql,mongodb,react,angular,node.js</li>
 //  </ul>`)
 // }
-// 3 варіант
-`<ul>
-  <li>html</li>
-   <li>css</li>
-  <li>javascript</li>
-  <li>mysql</li>
-  <li>mongodb</li>
-  <li>react</li>
- <li>angular</li>
-  <li>node.js</li>
- </ul>`
-let i;
-for ( i = 0; i <= listOfItems.length; i++ ){
-document.write (listOfItems[i]);
-}
+
+
+
 // ШАБЛОН:
 //   <ul>
 //     <li>ITEM OF ARRAY</li>
