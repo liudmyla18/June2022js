@@ -1,13 +1,13 @@
 // - Знайти та вивести довижину настипних стрінгових значень
 // 'hello world', 'lorem ipsum', 'javascript is cool'
 // let str = 'hello world'
-// console.log(str.slice(0,11));
-//
-// let str1 = 'lorem ipsum'
-// console.log(str1.slice(0,11));
-//
+// console.log(str.length);
+// //
+//  let str1 = 'lorem ipsum'
+// console.log(str1.length);
+// //
 // let str2 = 'javascript is cool'
-// console.log(str2.slice(0,19));
+// console.log(str2.length);
 // - Перевести до великого регістру наступні стрінгові значення
 // 'hello world', 'lorem ipsum', 'javascript is cool'
 
@@ -32,8 +32,12 @@
 // console.log(str2.toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+
 // let str = ' dirty string   '
 // console.log(str.replaceAll(`   `,``));
+//
+//  let s = str.trim();
+// console.log(s);
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
@@ -46,19 +50,21 @@
 // console.log(numbers.map(number => ` ` + number));
 
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
-//   let nums = [11,21,3];
+  let nums = [11,21,3];
 // sortNums(nums,'ascending') // [3,11,21]
-// nums.sort(function (n1,n2){
-//    return n1 - n2
-// })
-// console.log(nums);
-
 // sortNums(nums,'descending') // [21,11,3]
+let sortNums=((direction,arr)=>{
+  if (direction ==='ascending'){
+arr.sort((a , b)=> a-b);
+  }
+  else if (direction === 'descending'){
+  arr.sort((a , b)=> b - a );}
+  return arr
+});
 
-// nums.sort(function (n1,n2){
-//   return n2 - n1
-// })
-// console.log(nums);
+console.log(sortNums( 'ascending', nums));
+console.log(sortNums( 'descending',nums));
+
 
 // - є масив
 // let coursesAndDurationArray = [
@@ -121,7 +127,7 @@ let cards =[
 ];
 // console.log(cards)
 // - знайти піковий туз
-// console.log(cards.find(value => value.cardSuit ==='diamond'))
+console.log(cards.find(value => value.cardSuit ==='diamond'))
 // - всі шістки
 // console.log(cards.filter(value=>value.value===`6`));
 // //- всі червоні карти
@@ -134,16 +140,16 @@ let cards =[
 // Додатково по reduce
 // Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
 let reduce = cards.reduce((accumulator, card)=>{
-  if (card.cardSuit){
+  if (card.cardSuit ===`spade`){
     accumulator.spades.push(card);
   }
-  if (card.cardSuit){
+  if (card.cardSuit===`diamond`){
     accumulator.diamonds.push(card);
   }
-  if (card.cardSuit){
+  if (card.cardSuit === `heart`){
     accumulator.hearts.push(card);
   }
- if (card.cardSuit){
+ if (card.cardSuit === `clubs`){
    accumulator.clubs.push(card);
  }
 return accumulator;
