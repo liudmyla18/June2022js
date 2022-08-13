@@ -129,30 +129,81 @@
 // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
 //let arr = [`hello`,`string`,`java`,`hw`,`script`,100,-18,!0,true,false];
 // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
-massif = [];
-massif[9] = "hello";
-massif[8] = true;
-massif[2] = false;
-massif[3] = 3.14;
-massif[4] = 888;
-massif[5] = "hw";
-massif[6] = true;
-massif[7] = false;
-massif[1] = 3.14;
-massif[0] = 123;
-
-for (let i = 0; i < massif.length; i++){
-  console.log(massif[i]);}
+// massif = [];
+// massif[9] = "hello";
+// massif[8] = true;
+// massif[2] = false;
+// massif[3] = 3.14;
+// massif[4] = 888;
+// massif[5] = "hw";
+// massif[6] = true;
+// massif[7] = false;
+// massif[1] = 3.14;
+// massif[0] = 123;
+//
+// for (let i = 0; i < massif.length; i++){
+//   console.log(massif[i]);}
 // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
-// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+// for (let i=0;i<10;i++){
+//   console.log(`step:`, i );
+//   document.write(`<p>step: ${i} </p>`)
+// }
+// // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+// for (let i=0;i<100;i++){
+//   console.log(`step:`, i );
+//   document.write(`<p>step: ${i} </p>`)
+// }
 // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+// let s=0;
+// for (let i=0;i<10;i++){
+//   console.log(`step:`,s);
+//   document.write(`<p>step: ${s} </p>`)
+//   s+=2
+// }
+
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+// for (let i=0;i<100;i++){
+//   if (i%2===0){
+//   console.log(`step:`, i);
+//   document.write(`<p>step: ${i} </p>`)
+//   }
+// }
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
-//
-//
-//
+
+// for (let i=0;i<100;i++){
+//   if (i%2===1){
+//   console.log(`step:`, i);
+//   document.write(`<p>step: ${i} </p>`)
+//   }
+// }
+
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
+let arr=[
+  {
+    title:`The Hobbit`,
+    pageCount: 384,
+    genre: `fantasy`,
+    authors:`John Tolkien`,
+  },
+  {
+    title:`The silent patient`,
+    pageCount: 200,
+    genre: `detective`,
+    authors:`Alex Hichaelides`
+  },
+
+  {
+    title:`Jane Eyre`,
+    pageCount: 190,
+    genre: `novel`,
+    authors:`Chorlotte Bronte`,
+  }
+]
 // -знайти наібльшу книжку.
+for (const elements of arr){
+  console.log(elements.pageCount);
+}
+
 // - знайти книжку/ки з найбільшою кількістю жанрів
 // - знайти книжку/ки з найдовшою назвою
 // - знайти книжку/ки які писали 2 автори
