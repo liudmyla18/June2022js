@@ -178,31 +178,57 @@
 // }
 
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
-let arr=[
+let books =[
+ {
+  title:`The Hobbit`,
+  pageCount: 384,
+  genre: `fantasy`,
+  authors:`John Tolkien`,
+},
+{
+  title:`The silent patient`,
+  pageCount: 200,
+  genre: `detective`,
+  authors:`Alex Hichaelides`
+},
+
+{
+  title:`Jane Eyre`,
+  pageCount: 190,
+  genre: [`novel`,`novel1`,`novel3`],
+  authors:`Chorlotte Bronte`,
+},
   {
     title:`The Hobbit`,
-    pageCount: 384,
+    pageCount: 400,
     genre: `fantasy`,
     authors:`John Tolkien`,
   },
   {
-    title:`The silent patient`,
-    pageCount: 200,
+    title:`The silent patients`,
+    pageCount: 222,
     genre: `detective`,
-    authors:`Alex Hichaelides`
+    authors: [`Alex Hichaelides`, `Alex Hichaelides`]
   },
 
   {
     title:`Jane Eyre`,
-    pageCount: 190,
-    genre: `novel`,
+    pageCount: 123,
+    genre: [`novel`,`detective`],
     authors:`Chorlotte Bronte`,
   }
 ]
 // -знайти наібльшу книжку.
-for (const elements of arr){
-  console.log(elements.pageCount);
-}
+for (let book of books)
+  if (book.pageCount < books) {
+
+    console.log(books)
+  } else {
+
+
+  }
+
+
 
 // - знайти книжку/ки з найбільшою кількістю жанрів
 // - знайти книжку/ки з найдовшою назвою

@@ -65,28 +65,23 @@
 // console.log(norm(n1),norm(n2),norm(n3));
 
 // //   - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
-// let arr=[100]
-// function getRandomArbitrary (min,max){
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+// function getRandom(nums) {
+//   return Math.round(Math.random() * (nums));
 // }
-// console.log(getRandomArbitrary(0,100))
-//
-// function getRandom(num){
-//   return Math.round(Math.random()*num);
-// }
-// console.log(getRandom(arr))
+// console.log(getRandom(100))
 
 
 // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
-// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа (без 0!)
+
+// - створити (або згенерувати, за до
+// помоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа (без 0!)
 //
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
 // let str =`кожне слово починається з великої літери`
 // function capitalize(str) {
-// if (str)
-//   return   str.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ')
+//   return str.split(` `).map(word => word[0].toUpperCase() + word.substring(1)).join(' ')
 //
 // }
 //
@@ -101,7 +96,20 @@
 // someeMAIL@i.ua
 // some.email@gmail.com
 
-
+// let checkEmail = (email) => {
+//  let emArr = email.split(`@`);
+//   if(emArr.length !== 2){
+//     return false }
+//
+//   let [name,fullDomein] = emArr;
+//   let [deforeDot, afterDot] = fullDomein.split(`.`);
+//   return !(deforeDot.length < 2 || !afterDot || !name);
+//
+// }
+// console.log(checkEmail(`someemail@gmail.com`));
+// console.log(checkEmail(`someeMAIL@gmail.com`));
+// console.log(checkEmail(`someeMAIL@i.ua`));
+// console.log(checkEmail(`some.email@gmail.com`));
 // Примітка
 // Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні". Своїм мозком подумайте над протоколом, з регулярками будете потім бавитись.
 
@@ -191,12 +199,7 @@
 
 // // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
 //   let symb = "о", str = "Астрономия это наука о небесных объектах";
-// function count(str, stringsearch) {
-//     str.toLowerCase();
-//     stringsearch.toLowerCase();
-//   let count = str.split(symb).length -1
-// return count
-// }
+// let count = (str, stringsearch) => str.split(``).reduce((acc,value) => value === stringsearch ? acc +1:acc,0);
 //
 // document.writeln(count(str, symb)) // 5
 // console.log(count(str, symb))
@@ -214,63 +217,77 @@
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
 
 // -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
-let arr=[
- {
-  title:`The Hobbit`,
-  pageCount: 384,
-  genre: `fantasy`,
-  authors:`John Tolkien`,
-},
-{
-  title:`The silent patient`,
-  pageCount: 200,
-  genre: `detective`,
-  authors:`Alex Hichaelides`
-},
-
-{
-  title:`Jane Eyre`,
-  pageCount: 190,
-  genre: `novel`,
-  authors:`Chorlotte Bronte`,
-},
-  {
-    title:`The Hobbit`,
-    pageCount: 400,
-    genre: `fantasy`,
-    authors:`John Tolkien`,
-  },
-  {
-    title:`The silent patients`,
-    pageCount: 222,
-    genre: `detective`,
-    authors: [`Alex Hichaelides`, `Alex Hichaelides`]
-  },
-
-  {
-    title:`Jane Eyre`,
-    pageCount: 123,
-    genre: [`novel`,`detective`],
-    authors:`Chorlotte Bronte`,
-  }
-]
-
-// // -знайти наібльшу книжку.
-// let find = arr.find(value => value.pageCount > 0)
-// console.log(find)
-// // - знайти книжку/ки з найбільшою кількістю жанрів
-// console.log(arr.filter(value => value.genre.length === 2))
-// - знайти книжку/ки з найдовшою назвою
-console.log(arr.filter(value => value.title.length > 10 || value.title.length === `string` ))
-
+// let books =[
+//  {
+//   title:`The Hobbit`,
+//   pageCount: 384,
+//   genre: `fantasy`,
+//   authors:`John Tolkien`,
+// },
+// {
+//   title:`The silent patient`,
+//   pageCount: 200,
+//   genre: `detective`,
+//   authors:`Alex Hichaelides`
+// },
+//
+// {
+//   title:`Jane Eyre`,
+//   pageCount: 190,
+//   genre: [`novel`,`novel1`,`novel3`],
+//   authors:`Chorlotte Bronte`,
+// },
+//   {
+//     title:`The Hobbit`,
+//     pageCount: 400,
+//     genre: `fantasy`,
+//     authors:`John Tolkien`,
+//   },
+//   {
+//     title:`The silent patients`,
+//     pageCount: 222,
+//     genre: `detective`,
+//     authors: [`Alex Hichaelides`, `Alex Hichaelides`]
+//   },
+//
+//   {
+//     title:`Jane Eyre`,
+//     pageCount: 123,
+//     genre: [`novel`,`detective`],
+//     authors:`Chorlotte Bronte`,
+//   }
+// ]
+//
+// // // -знайти наібльшу книжку.
+//
+// let max =books[0]
+// books.forEach((item => max =item.pageCount > max.pageCount? item:max))
+// console.log(max)
+// // // - знайти книжку/ки з найбільшою кількістю жанрів
+// let maxGenre =books[0]
+// books.forEach((item => maxGenre =item.genre > maxGenre.genre? item:maxGenre))
+// console.log(maxGenre)
+//
+//
+// // - знайти книжку/ки з найдовшою назвою
+//
+// let maxTitle =books[0]
+// books.forEach((item => maxTitle =item.title > maxTitle.title? item:maxTitle))
+// console.log(maxTitle)
+//
+// let maxPec = books.reduce((acc,value)=>acc.pageCount > value.pageCount?acc:value);
+// console.log(maxPec)
+// // - знайти книжку/ки з найдовшою назвою
+// let maxTitle = books.reduce((acc,value)=>acc.title > value.title?acc:value);
+// console.log(maxTitle)
 // // - знайти книжку/ки які писали 2 автори
-// console.log(arr.filter(value => value.authors.length === 2))
+// console.log(array.filter(value => value.authors.length === 2))
 
 // // - знайти книжку/ки які писав 1 автор
-// console.log(arr.filter(value => value.authors.length !== 2))
+// console.log(array.filter(value => value.authors.length !== 2))
 
 // // - вісортувати книжки по кількості сторінок по зростанню
-// arr.sort((a,b)=>{
+// array.sort((a,b)=>{
 //  if (a.pageCount > b.pageCount){
 //    return 1
 //  }
@@ -281,4 +298,4 @@ console.log(arr.filter(value => value.title.length > 10 || value.title.length ==
 //      return 0
 //    }
 // })
-// console.log(arr)
+// console.log(array)
