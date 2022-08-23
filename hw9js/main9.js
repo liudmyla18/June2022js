@@ -44,6 +44,7 @@
 // let member = document.getElementsByClassName(`member`)[0];
 // for (const simpson of simpsons){
 //   let div = document.createElement(`div`);
+//   div.classList.add('member');
 //   div.classList.add(`simson-box`);
 //
 //   let simpsonName = document.createElement(`h2`);
