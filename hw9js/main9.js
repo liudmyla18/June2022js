@@ -302,39 +302,39 @@ for (const item of coursesArray) {
 //
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //   При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
-const input1 = document.createElement('input');
-input1.setAttribute('placeholder', 'Enter name');
-const input2 = document.createElement('input');
-const input3 = document.createElement('input');
-
-const button = document.createElement('button');
-button.innerText = 'Click';
-
-document.body.append(input1, input2, input3, button);
-
-button.addEventListener('click', function () {
-  let row = input1.value;
-  let col = input2.value;
-  let elem = input3.value;
-
-  let generator = (tr, td, text) => {
-
-
-    const htmlTableElement = document.createElement('table');
-    document.body.appendChild(htmlTableElement);
-
-    for (let i = 0; i < tr; i++) {
-      const tr = document.createElement('tr');
-      htmlTableElement.appendChild(tr);
-
-      for (let j = 0; j < td; j++) {
-        const td = document.createElement('td');
-        td.innerText = `${text}`;
-        tr.appendChild(td);
-      }
-    }
-
-  }
-  generator(row, col, elem);
-  button.disabled = true;
-})
+// const input1 = document.createElement('input');
+// input1.setAttribute('placeholder', 'Enter name');
+// const input2 = document.createElement('input');
+// const input3 = document.createElement('input');
+//
+// const button = document.createElement('button');
+// button.innerText = 'Click';
+//
+// document.body.append(input1, input2, input3, button);
+//
+// button.addEventListener('click', function () {
+//   let row = input1.value;
+//   let col = input2.value;
+//   let elem = input3.value;
+//
+//   let generator = (tr, td, text) => {
+//
+//
+//     const htmlTableElement = document.createElement('table');
+//     document.body.appendChild(htmlTableElement);
+//
+//     for (let i = 0; i < tr; i++) {
+//       const tr = document.createElement('tr');
+//       htmlTableElement.appendChild(tr);
+//
+//       for (let j = 0; j < td; j++) {
+//         const td = document.createElement('td');
+//         td.innerText = `${text}`;
+//         tr.appendChild(td);
+//       }
+//     }
+//
+//   }
+//   generator(row, col, elem);
+//   button.disabled = true;
+// })

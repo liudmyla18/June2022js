@@ -4,10 +4,14 @@ body{
 
 }
 .main{
-  display: flex;
-  border: 1px solid #666;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  width: 800px;
+margin: 50px;
   box-sizing: border-box;
-  margin-top: 50px;
+  min-height: min-content;
+  display: flex;
+  flex-wrap: wrap;
 }
 .index{
   height: 50px;
@@ -23,12 +27,12 @@ body{
 .styles{
   width: 300px;
   height: 75px;
-  /*display: block;*/
-  justify-content:center;
-  align-items: center;
   margin: 15px;
   border-bottom: 1px solid #666;
   font-family: arial, sans-serif;
+  cursor: pointer;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
 }
 .user-details{
   height: 100px;
